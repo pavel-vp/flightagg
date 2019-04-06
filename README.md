@@ -28,7 +28,7 @@ RestAPI description:
  Format - [field_name;asc|desc]
  
 2.2. Filtering data.
- [f_departure=like;Berlin]
+ [f_departure=like;Berlin]<br>
  Format - [f_field_name=like;|gte;|lte;value]
 where "like;" - like operator
       "gte;" - grater or equas then

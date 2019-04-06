@@ -9,14 +9,14 @@ After starting application this can be used on
   http://localhost:8080/flights
 context path.
 
-Resulting flight record example:
-[{"id":"2231887273634720768",
-  "departure":"El Palomar",
-  "arrival":"Chacarita",
-  "departureTime":1554578966044,
-  "arrivalTime":1554579032743}]
+Resulting flight record example:<br>
+[{"id":"2231887273634720768",<br>
+  "departure":"El Palomar",<br>
+  "arrival":"Chacarita",<br>
+  "departureTime":1554578966044,<br>
+  "arrivalTime":1554579032743}]<br>
 
-RestAPI description:
+RestAPI description:<br>
 1. Get all flights
 - http://localhost:8080/flights/all
 
@@ -24,22 +24,22 @@ RestAPI description:
 - http://localhost:8080/flights/q?sorted=arrivalTime;asc&f_departure=like;Berlin&limit=10&offset=5
 
 2.1. Ordering data. 
- [sorted=arrivalTime;asc]
- Format - [field_name;asc|desc]
+ [sorted=arrivalTime;asc]<br>
+ Format - [field_name;asc|desc]<br>
  
 2.2. Filtering data.
  [f_departure=like;Berlin]<br>
- Format - [f_field_name=like;|gte;|lte;value]
-where "like;" - like operator
-      "gte;" - grater or equas then
-      "lte;" - lower or equals then.
-Filter is case sensitive.
+ Format - [f_field_name=like;|gte;|lte;value]<br>
+where "like;" - like operator<br>
+      "gte;" - grater or equas then<br>
+      "lte;" - lower or equals then.<br>
+Filter is case sensitive.<br>
 
 2.3. Pagination data.
-  [offset=5]
-  Format - [offset=n]
- where "n" - starting with n record.
- 
-  [limit=10]
-  Format - [limit=n]
- where "n" - limit with n records total.
+  [offset=5]<br>
+  Format - [offset=n]<br>
+ where "n" - starting with n record.<br>
+ <br>
+  [limit=10]<br>
+  Format - [limit=n]<br>
+ where "n" - limit with n records total.<br>

@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public abstract class FlightsProvider {
-    protected String url;
 
     protected RestTemplate restTemplate;
 
@@ -18,13 +17,17 @@ public abstract class FlightsProvider {
         this.restTemplate = restTemplate;
     }
 
-
     public abstract List<RespProvider> loadRawData();
 
     public List<FlightData> decodeData(List<RespProvider> rawData) {
-        List<FlightData> result = rawData.stream()
+        return rawData.stream()
                 .map(RespProvider::toFlightData)
                 .collect(Collectors.toList());
-        return result;
     }
+
+    public List<FlightData> getFlights() {
+        return decodeData(loadRawData());
+    }
+
+    public abstract String getUrl();
 }

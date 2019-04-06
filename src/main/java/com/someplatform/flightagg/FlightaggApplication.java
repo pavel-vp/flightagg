@@ -1,5 +1,7 @@
 package com.someplatform.flightagg;
 
+import com.someplatform.flightagg.providers.FlightaggProvider;
+import com.someplatform.flightagg.providers.IFlightaggProvider;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -26,4 +28,10 @@ public class FlightaggApplication {
         restTemplate.setMessageConverters(list);
         return restTemplate;
     }
+
+    @Bean
+    public IFlightaggProvider getFlightaggProvider() {
+        return new FlightaggProvider();
+    }
+
 }

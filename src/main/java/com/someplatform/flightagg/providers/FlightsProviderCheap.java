@@ -15,9 +15,16 @@ import java.util.List;
 @Service
 public class FlightsProviderCheap extends FlightsProvider {
 
+    @Value("${url.providercheap}")
+    private String urlCheap;
 
-    public void setUrl(@Value("${url.providercheap}") String url) {
-        this.url = url;
+    public void setUrl(String url) {
+        this.urlCheap = url;
+    }
+
+    @Override
+    public String getUrl() {
+        return this.urlCheap;
     }
 
     @Override
@@ -25,7 +32,7 @@ public class FlightsProviderCheap extends FlightsProvider {
         List<RespProvider> result = new ArrayList<>();
         try {
             ResponseEntity<RespProviderCheap[]> rateResponse  = restTemplate.getForEntity(
-                    new URI(url),
+                    new URI(getUrl()),
                     RespProviderCheap[].class
             );
             result.addAll(Arrays.asList(rateResponse.getBody()));
@@ -36,5 +43,6 @@ public class FlightsProviderCheap extends FlightsProvider {
 
         return result;
     }
+
 
 }

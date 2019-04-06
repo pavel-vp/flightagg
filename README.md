@@ -21,7 +21,7 @@ RestAPI description:
 - http://localhost:8080/flights/all
 
 2. Query with parameters
-- http://localhost:8080/flights/q?[sorted=arrivalTime;asc]&[f_departure=like;Berlin]&[limit=10]&[offset=5]
+- http://localhost:8080/flights/q?sorted=arrivalTime;asc&f_departure=like;Berlin&limit=10&offset=5
 
 2.1. Ordering data. 
  [sorted=arrivalTime;asc]

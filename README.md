@@ -1,5 +1,5 @@
 # flightagg
-Simple Springboot application with RestAPI for flight providers. This application aggregates data from these sources:
+Simple draft Springboot application with RestAPI for flight providers. This application aggregates data from these sources:
 - https://obscure-caverns-79008.herokuapp.com/cheap
 - https://obscure-caverns-79008.herokuapp.com/business
 
@@ -43,3 +43,10 @@ Filter is case sensitive.<br>
   [limit=10]<br>
   Format - [limit=n]<br>
  where "n" - limit with n records total.<br>
+
+NB: Things to do.<br>
+Due to lack of time there are a lot of things to do: <br>
+- Test with Springboot context all API methods <br>
+- Cover corner cases with tests<br>
+- Exception handling<br>
+- Possibility to use several fields in filter clauses.<br>

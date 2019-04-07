@@ -13,7 +13,6 @@ public class RespProviderBusiness implements RespProvider {
 
     private static final String PATH_DELIMITER = " -> ";
 
-    // "uuid":"363e664b-9b28-4b83-b05c-3497fc29ff67","flight":"Victoria -> Villa Canas","departure":"2019-04-05T17:54:00.597Z","arrival":"2019-04-05T19:13:18.701Z"
     private String uuid;
     private String flight;
     private String departure;
